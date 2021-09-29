@@ -12,7 +12,7 @@ public class FirstTest extends BaseTest {
 	public void titleCheck() {
 		Reporter.log(String.format("Title verification testcase %s", Thread.currentThread().getId()), true);
 		driver = getDriver();
-		driver.get("http://65.0.188.10:8080/webapp-5.0.0/");
+		driver.get("http://65.0.188.190:8080/webapp-5.0.0/");
 
 		Assert.assertEquals(driver.findElement(By.xpath("/html/body/h2")).getText(), "Modal Signup Form");
 		Reporter.log(String.format("application name verified %s", Thread.currentThread().getId()), true);
