@@ -19,7 +19,7 @@ public class BaseTest {
 	public void setupTest(String browser) throws MalformedURLException {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
-		// options.addArguments("headless");
+		 options.addArguments("headless");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
 
