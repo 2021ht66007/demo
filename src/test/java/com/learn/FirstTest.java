@@ -12,7 +12,15 @@ public class FirstTest extends BaseTest {
 	public void titleCheck() {
 		Reporter.log(String.format("Title verification testcase %s", Thread.currentThread().getId()), true);
 		driver = getDriver();
+		String env=System.getProperty("Environment");
+                if(env.equalsIgnoreCase("DEV")){        
 		driver.get("http://65.0.188.190:8080/webapp-5.0.0/");
+		} else if (env.equalsIgnoreCase("UAT")){        
+		driver.get("http://15.207.185.3:8080/webapp-5.0.0/");
+		} else if (env.equalsIgnoreCase("PROD")){        
+		driver.get("http://15.207.185.3:8080/webapp-5.0.0/");
+		}
+		
 
 		Assert.assertEquals(driver.findElement(By.xpath("/html/body/h2")).getText(), "Modal Signup Form");
 		Reporter.log(String.format("application name verified %s", Thread.currentThread().getId()), true);
