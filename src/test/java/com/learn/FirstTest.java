@@ -18,7 +18,7 @@ public class FirstTest extends BaseTest {
 		} else if (env.equalsIgnoreCase("UAT")){        
 		driver.get("http://15.207.185.3:8080/webapp-5.0.0/");
 		} else if (env.equalsIgnoreCase("PROD")){        
-		driver.get("http://15.207.185.3:8080/webapp-5.0.0/");
+		driver.get("http://3.110.0.2:8080/webapp-5.0.0/");
 		}
 		
 
